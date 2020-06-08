@@ -48,3 +48,31 @@ function getPlanetName(id){
     return `Hello ${name.charAt(0).toUpperCase()+name.slice(1).toLowerCase()}!`
     };
 
+// testing the length of an array against a function kyu 7
+
+function one(arr, fun){
+  // create a new array then test the length, if length > 1 then false
+  return arr.filter(fun).length == 1;
+  }
+
+  // Kyu 7 Complete Series
+
+  function completeSeries(arr) {
+    // write your code here
+    let max = arr.reduce((a,b) => Math.max(a,b)) 
+    let min = arr.reduce((a,b) => Math.min(a,b))
+    
+    let arr2 = arr.filter((a,b) => arr.indexOf(a) === b)
+  
+  
+  if(arr2.length === arr.length) {
+    let arr3 = []
+    for (let i = 0; i <= max; i++) {
+    arr3.push(i)
+  }
+    return arr3
+  } else {
+   return [0]
+  }
+  
+  }
